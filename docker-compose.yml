@@ -19,8 +19,8 @@ services:
       ENABLE_IPV6: "true"
       HOSTNAME: "vfoxapi.shopsthai.com"
       LANG: C.UTF-8
-    external_links:
-      - "mariadb"
+    # external_links:
+    #   - "mariadb"
     network_mode: "bridge"
 
   mariadb:
