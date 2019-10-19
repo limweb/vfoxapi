@@ -27,8 +27,11 @@ class TestController  extends JwtController {
     */
     public function index(){
         Capsule::enableQueryLog();
-        $rs = '';
-        dump(json_decode(json_encode($rs)));
+        $rs = Artrn::get();
+        dump($rs);
+        $rs = Artrnhs::get();
+        dump($rs);
+        // dump(json_decode(json_encode($rs)));
         $sql = Capsule::getQueryLog();
         dump($sql);
     }
