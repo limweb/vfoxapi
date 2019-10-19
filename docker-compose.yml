@@ -24,8 +24,6 @@ services:
     #   - "mariadb"
     depends_on:
       - "mariadb"
-    links:
-      - "mariadb"
     network_mode: "bridge"
 
   mariadb:
