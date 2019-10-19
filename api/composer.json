@@ -1,0 +1,35 @@
+{
+    "name": "servit/phpserver",
+    "description": "PHP WEB REST SERVER",
+    "authors": [{
+        "name": "Thongchai Lim",
+        "email": "thongchai@servit.co.th"
+    }],
+    "repositories": [{
+        "name": "servit/framework7",
+        "type": "git",
+        "url": "file://d:/works/servit/framework7/.git"
+    }],
+    "require": {
+        "php": ">=7.3.0",
+        "illuminate/database": "5.8.*",
+        "illuminate/events": "5.8.*",
+        "symfony/var-dumper": "4.4.*",
+        "lcobucci/jwt": "3.2.*",
+        "php-curl-class/php-curl-class": "8.6.*",
+        "eoghanobrien/php-simple-mail": "^1.7",
+        "vlucas/phpdotenv": "3.4.*",
+        "webonyx/graphql-php": "dev-master",
+        "nesbot/carbon": "2.*",
+        "servit/framework7": "dev-master",
+        "endroid/qrcode": "^3.0@dev",
+        "jenssegers/mongodb": "^3.5.3",
+        "kreait/firebase-php": "^4.0@dev"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "minimum-stability": "dev"
+}

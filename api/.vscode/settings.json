@@ -1,0 +1,29 @@
+{
+    "deploy.reloaded": {
+        "packages": [{
+            "name": "pttphp",
+            "files": ["*.php"],
+            "exclude": [".vscode","./configs",".env"],
+            "deployOnChange": true,
+            "deployOnSave": true,
+            "fastCheckOnSave": true,
+            "targets": ["pttphp"]
+        }],
+        "targets": [{
+                "name": "pttphp",
+                "type": "sftp",
+                "description": "ptt-php",
+                "dir": "/home/www/ptt-php",
+                "host": "128.199.166.33",
+                "port": 2227,
+                "user": "ideale",
+                "password": "kWJy5A3pN3",
+                "checkBeforeDeploy": true,
+                "mappings": {
+                    "/": "/home/www/ptt-php"
+                }
+            }
+        ]
+    },
+    "tslint.typeCheck": false
+}
