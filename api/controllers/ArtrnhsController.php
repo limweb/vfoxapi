@@ -132,5 +132,39 @@ class ArtrnhsController  extends BaseController {
     }
 
 
+    
+    /**
+    *@noAuth
+    *@url GET /artrnhs/$id
+    *----------------------------------------------
+    *FILE NAME:  ArtrnhsController.php gen for Servit Framework Controller
+    *Created by: Tlen<limweb@hotmail.com>
+    *DATE:  2019-10-20(Sun)  00:39:08 
+    
+    *----------------------------------------------
+    */
+    public function artrnhs($id){
+        try {
+            $artrnhs = Artrnhs::where('DOCNUM',$id)->first();
+            return [
+                'datas' => $artrnhs,
+                'status' => '1',
+                'success'=> true,
+                //'sql' => Capsule::getQueryLog(),
+                'func'=> __CLASS__.'/'.__FUNCTION__
+            ];
+        } catch (Exception $e) {
+            return[
+                'status' => '0',
+                'success'=> false,
+                'msg'=> $e->getMessage(),
+                'func'=> __CLASS__.'/'.__FUNCTION__,
+            ]; 
+        }
+    }
+    
+    
+
+
 }
 

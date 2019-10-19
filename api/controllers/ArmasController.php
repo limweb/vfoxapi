@@ -132,7 +132,70 @@ class ArmasController  extends BaseController {
         }
     }
 
-
+    
+    /**
+    *@noAuth
+    *@url GET /armas/$id
+    *----------------------------------------------
+    *FILE NAME:  ArmasController.php gen for Servit Framework Controller
+    *Created by: Tlen<limweb@hotmail.com>
+    *DATE:  2019-10-20(Sun)  00:16:52 
+    
+    *----------------------------------------------
+    */
+    public function armasbyid($id){
+        try {
+            $customer = Armas::where('CUSCOD',$id)->first();
+            return [
+                'datas'=> $customer,
+                'status' => '1',
+                'success'=> true,
+            ];
+        } catch (Exception $e) {
+            return[
+                'status' => '0',
+                'success'=> false,
+                'msg'=> $e->getMessage(),
+            ]; 
+        }
+    }
+    
+    
+    /**
+    *@noAuth
+    *@url GET /armas/$page/$perpage
+    *----------------------------------------------
+    *FILE NAME:  ArmasController.php gen for Servit Framework Controller
+    *Created by: Tlen<limweb@hotmail.com>
+    *DATE:  2019-10-20(Sun)  00:42:22 
+    
+    *----------------------------------------------
+    */
+    public function armaspage($page=1,$perpage=10){
+        try {
+            $page =  $page ? $page : 1;
+            $perpage = $perpage? $perpage : 10;
+            $skip = ($page-1) * $perpage;
+            $take = $perpage;
+            $total = Armas::count();
+            $datas = Armas::skip($skip)->take($take)->get();
+            return [
+                'datas' => $datas,
+                'status' => '1',
+                'total' => $total,
+                'success'=> true,
+            ];
+        } catch (Exception $e) {
+            return[
+                'status' => '0',
+                'success'=> false,
+                'msg'=> $e->getMessage(),
+            ]; 
+        }
+    }
+    
+    
+    
 
 }
 

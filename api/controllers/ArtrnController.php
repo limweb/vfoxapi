@@ -132,5 +132,35 @@ class ArtrnController  extends BaseController {
     }
 
 
+/**
+*@noAuth
+*@url GET /artrn/$id
+*----------------------------------------------
+*FILE NAME:  ArtrnController.php gen for Servit Framework Controller
+*Created by: Tlen<limweb@hotmail.com>
+*DATE:  2019-10-20(Sun)  00:22:14 
+
+*----------------------------------------------
+*/
+public function artrnbyid($id){
+    try {
+        $artrn = Artrn::where("DOCNUM",$id)->first();
+        return [
+            'datas' => $artrn,
+            'status' => '1',
+            'success'=> true,
+        ];
+    } catch (Exception $e) {
+        return[
+            'status' => '0',
+            'success'=> false,
+            'msg'=> $e->getMessage(),
+        ]; 
+    }
+}
+
+ 
+
+
 }
 
