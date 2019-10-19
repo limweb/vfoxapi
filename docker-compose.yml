@@ -4,10 +4,11 @@ services:
   vfoxapi:
     image: "richarvey/nginx-php-fpm:latest"
     container_name: vfoxapi
-    working_dir: /app/
+    working_dir: /var/www/html
     restart: "always"
     volumes:
-      - ./:/app/
+      - ./nginx/nginx.conf:/etc/nginx/sites-available/default.conf
+      - ./api/:/var/www/html/
     labels:
       com.docker.compose.project: "vfoxapi"
     ports:
