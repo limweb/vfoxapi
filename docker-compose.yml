@@ -20,20 +20,20 @@ services:
       # ENABLE_IPV6: "true"
       # HOSTNAME: "vfoxapi.shopsthai.com"
       # LANG: C.UTF-8
-    # external_links:
-    #   - "mariadb"
-    depends_on:
+    external_links:
       - "mariadb"
+    # depends_on:
+    #   - "mariadb"
     network_mode: "bridge"
 
-  mariadb:
-    image: mariadb
-    restart: always
-    container_name: mariadb
-    volumes:
-      - mariadb_data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: toor
+  # mariadb:
+  #   image: mariadb
+  #   restart: always
+  #   container_name: mariadb
+  #   volumes:
+  #     - mariadb_data:/var/lib/mysql
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: toor
 
   portainer:
     image: portainer/portainer
