@@ -15,11 +15,11 @@ services:
       - "8101:80"
     expose:
       - "8101"
-    environment:
-      VIRTUAL_HOST: "vfoxapi.shopsthai.com"
-      ENABLE_IPV6: "true"
-      HOSTNAME: "vfoxapi.shopsthai.com"
-      LANG: C.UTF-8
+    # environment:
+      # VIRTUAL_HOST: "vfoxapi.shopsthai.com"
+      # ENABLE_IPV6: "true"
+      # HOSTNAME: "vfoxapi.shopsthai.com"
+      # LANG: C.UTF-8
     # external_links:
     #   - "mariadb"
     network_mode: "bridge"
