@@ -1,0 +1,20 @@
+#  docker-compose -f docker-compose.yml config check validate config
+version: "3.7"
+services:
+  vfoxapi:
+    image: "richarvey/nginx-php-fpm:latest"
+    container_name: vfoxapi
+    working_dir: /app/
+    restart: "always"
+    volumes:
+      - ./:/app/
+    labels:
+      com.docker.compose.project: "vfoxapi"
+    environment:
+      VIRTUAL_HOST: "vfoxapi.shopsthai.com"
+      ENABLE_IPV6: "true"
+      HOSTNAME: "vfoxapi.shopsthai.com"
+      LANG: C.UTF-8
+    external_links:
+      - "mariadb"
+    network_mode: "bridge"
