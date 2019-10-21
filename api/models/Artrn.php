@@ -25,11 +25,21 @@ class Artrn extends Model
         protected	$fillable = [];
         protected	$hidden = []; //สำหรับใส่ mutations
         protected	$appends = [];
-        protected	$with = ['customer'];
+        protected	$with = ['customer','details','vat'];
         protected	$connection = '';
 
         public function customer(){
                 return $this->hasOne('Armas','CUSCOD','CUSCOD');
         }
+
+        public function details(){
+                return $this->hasMany('Stcrd','DOCNUM','DOCNUM');
+        }
+
+        public function vat(){
+                return $this->hasMany('Isvat','DOCNUM','DOCNUM');
+        }
+        // A/R Receipt Item (Cheque)
+        
 
 } 

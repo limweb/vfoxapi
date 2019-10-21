@@ -14,7 +14,7 @@
          protected   $fillable = []; 
          protected   $hidden = []; 
          protected   $appends = []; 
-         protected	 $with = ['customer'];
+         protected	 $with = ['customer','details','vat'];
          protected   $connection = ''; 
          protected   $casts = []; 
         
