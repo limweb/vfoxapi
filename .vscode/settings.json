@@ -1,0 +1,27 @@
+{
+  "deploy.reloaded": {
+    "packages": [{
+      "name": "pttphp",
+      "files": ["*.php"],
+      "exclude": [".vscode", "./configs", ".env"],
+      "deployOnChange": true,
+      "deployOnSave": true,
+      "fastCheckOnSave": true,
+      "targets": ["VFOX"]
+    }],
+    "targets": [{
+      "type": "sftp",
+      "name": "VFOX",
+      "description": "SFTP target with key file",
+      "dir": "/var/www/vfoxapi/",
+      "host": "203.150.107.73",
+      "port ": 22,
+      "user": "ols-user",
+      "privateKey": "d:/works/vfpthailand/thaivisualfoxpro.pem",
+      "mappings": {
+        "/": "/var/www/vfoxapi"
+      }
+    }]
+  },
+  "tslint.typeCheck": false
+}

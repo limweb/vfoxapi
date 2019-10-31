@@ -27,12 +27,20 @@ class TestController  extends JwtController {
     */
     public function index(){
         Capsule::enableQueryLog();
+<<<<<<< HEAD
         $rs = OESO::get();
         dump($rs[1]);
         dump(json_decode(json_encode($rs)));
         $rs = Artrnhs::get();
         // dump($rs);
         dump(json_decode(json_encode($rs)));
+=======
+        $rs = Artrn::get();
+        dump($rs);
+        $rs = Artrnhs::get();
+        dump($rs);
+        // dump(json_decode(json_encode($rs)));
+>>>>>>> fbdd12458f7448660311e1847dd40e12be2b9a7c
         $sql = Capsule::getQueryLog();
         dump($sql);
     }

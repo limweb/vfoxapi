@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbdd12458f7448660311e1847dd40e12be2b9a7c
 //----------------------------------------------
 //FILE NAME:  Armas.php gen for Servit Framework Model
 //Created by: Tlen<limweb@hotmail.com>

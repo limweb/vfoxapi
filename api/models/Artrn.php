@@ -39,5 +39,10 @@ class Artrn extends Model
         public function vat(){
                 return $this->hasMany('Isvat','DOCNUM','DOCNUM');
         }
+<<<<<<< HEAD
+=======
+        // A/R Receipt Item (Cheque)
+        
+>>>>>>> fbdd12458f7448660311e1847dd40e12be2b9a7c
 
 } 
