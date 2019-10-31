@@ -16,16 +16,15 @@ services:
     expose:
       - "8101"
     # environment:
-      # VIRTUAL_HOST: "vfoxapi.shopsthai.com"
-      # ENABLE_IPV6: "true"
-      # HOSTNAME: "vfoxapi.shopsthai.com"
-      # LANG: C.UTF-8
-    external_links:
-      - "mariadb"
+    # VIRTUAL_HOST: "vfoxapi.shopsthai.com"
+    # ENABLE_IPV6: "true"
+    # HOSTNAME: "vfoxapi.shopsthai.com"
+    # LANG: C.UTF-8
+    # external_links:
+    #   - "mariadb"
     # depends_on:
     #   - "mariadb"
     network_mode: "bridge"
-
   # mariadb:
   #   image: mariadb
   #   restart: always
@@ -34,22 +33,21 @@ services:
   #     - mariadb_data:/var/lib/mysql
   #   environment:
   #     MYSQL_ROOT_PASSWORD: toor
-
-  portainer:
-    image: portainer/portainer
-    restart: always
-    ports:
-      - "9000:9000"
-    expose:
-      - "9000"    
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer_data:/data
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.portainer.rule=Host(`dev.portainer`)"
-      - "traefik.http.routers.portainer.entrypoints=web"
+  # portainer:
+  #   image: portainer/portainer
+  #   restart: always
+  #   ports:
+  #     - "9000:9000"
+  #   expose:
+  #     - "9000"
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - portainer_data:/data
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.portainer.rule=Host(`dev.portainer`)"
+  #     - "traefik.http.routers.portainer.entrypoints=web"
 
 volumes:
-  portainer_data:
+  # portainer_data:
   mariadb_data:
