@@ -40,6 +40,5 @@ class Artrn extends Model
                 return $this->hasMany('Isvat','DOCNUM','DOCNUM');
         }
         // A/R Receipt Item (Cheque)
-        
 
 } 

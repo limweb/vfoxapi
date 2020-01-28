@@ -1,6 +1,4 @@
 <?php
-
-
 //----------------------------------------------
 //FILE NAME:  ArmasController.php gen for Servit Framework Controller
 //Created by: Tlen<limweb@hotmail.com>
@@ -10,7 +8,7 @@
 use	\Servit\Restsrv\RestServer\RestException;
 use	\Servit\Restsrv\RestServer\RestController as BaseController;
 use	Illuminate\Database\Capsule\Manager as Capsule;
-use	Servit\Restsrv\Libs\Request; 
+use	Servit\Restsrv\Libs\Request;
 use	Servit\Restsrv\Libs\Linenotify;
 use	Carbon\Carbon;
 use \Servit\Restsrv\traits\DbTrait;
@@ -193,9 +191,6 @@ class ArmasController  extends BaseController {
             ]; 
         }
     }
-    
-    
-    
 
 }
 

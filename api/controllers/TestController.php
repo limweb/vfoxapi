@@ -14,15 +14,12 @@ use	Carbon\Carbon;
 use \Servit\Restsrv\traits\DbTrait;
 
 class TestController  extends JwtController {
-    
-    
     /**
     *@noAuth
     *@url GET /index
     *----------------------------------------------
     *FILE NAME:  TestController.php gen for Servit Framework Controlle\r
     *DATE:  2019-08-03(Sat)  18:13:26 
-    
     *----------------------------------------------
     */
     public function index(){
@@ -35,7 +32,5 @@ class TestController  extends JwtController {
         $sql = Capsule::getQueryLog();
         dump($sql);
     }
-    
-
 }
 

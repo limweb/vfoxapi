@@ -1,5 +1,4 @@
 <?php
-
 //----------------------------------------------
 //FILE NAME:  Armas.php gen for Servit Framework Model
 //Created by: Tlen<limweb@hotmail.com>
