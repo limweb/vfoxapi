@@ -12,8 +12,8 @@
     }],
     "require": {
         "php": ">=7.3.0",
-        "illuminate/database": "5.8.*",
-        "illuminate/events": "5.8.*",
+        "illuminate/database": "6.2.14",
+        "illuminate/events": "6.2.14",
         "symfony/var-dumper": "4.4.*",
         "lcobucci/jwt": "3.2.*",
         "php-curl-class/php-curl-class": "8.6.*",
